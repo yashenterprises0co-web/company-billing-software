@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Document Manager - Yash Enterprises</title>
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div id="app">
+    <header>
+      <h1>Document Manager</h1>
+      <select id="languageSelect">
+        <option value="en">English</option>
+        <option value="hi">Hindi</option>
+        <option value="mr">Marathi</option>
+      </select>
+    </header>
+
+    <section id="createDocumentSection">
+      <h2>Create Document</h2>
+      <input id="docTitle" placeholder="Enter Title" />
+      <textarea id="docContent" placeholder="Enter Content"></textarea>
+      <input id="contactNumber" placeholder="Contact Number (10 digits)" maxlength="10" />
+      <input type="file" id="imageUpload" multiple accept="image/*" />
+      <div id="imagePreviewContainer"></div>
+      <button id="createBtn">Create</button>
+    </section>
+
+    <section id="documentsListSection">
+      <h2>Your Documents</h2>
+      <div id="documentsList"></div>
+    </section>
+
+    <section id="documentViewSection" style="display:none;">
+      <button id="backToListBtn">Back</button>
+      <h2 id="viewDocTitle"></h2>
+      <div id="viewDocContent"></div>
+      <div id="viewImagesContainer"></div>
+      <button id="editBtn">Edit</button>
+      <button id="saveBtn" style="display:none;">Save</button>
+      <button id="deleteBtn">Delete</button>
+      <div id="shareButtons"></div>
+      <button id="exportJSONBtn">Export JSON</button>
+      <button id="exportCSVBtn">Export CSV</button>
+      <button id="exportPDFBtn">Export PDF</button>
+    </section>
+  </div>
+
+<script src="script.js"></script>
+</body>
+</html>
